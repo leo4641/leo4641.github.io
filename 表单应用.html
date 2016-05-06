@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>表单应用</title>
+      <meta charset="utf-8">
+      <style>
+         h1,h2{ text-align:center;
+         }
+         #外套div { float: left; /* 自适应内容宽度 */
+                    position: relative;
+                    left: 50%; 
+         }
+         #外套div2 {
+                    position: relative;
+                    left: -50%; 
+                    }
+             body  {background:#efe5d0 ;
+             
+                     }
+             
+             form{display:table;
+                  padding:50px;
+                  border:thin dotted #7e7e7e;
+                  background-color:#e1ceb8;
+             }
+             form textarea{width:300px;
+                          height:200px;
+             }
+             div.tableRow{display:table-row; 
+                           
+             }
+             div.tableRow p{display:table-cell;
+                            vertical-align:top;
+                            padding:3px;
+                            
+             }
+             div.tableRow p:first-child{ text-align:right;  
+             }
+           .heading {font-weight:bold;
+             }
+             label{font-weight:bold;
+             }
+      </style>
+  </head>
+  <body>
+      <h1>咖啡预定<h1>
+      <h2>填写下面的表格</h2>
+   
+     <div id="外套div">
+      <div id="外套div2">
+      <form action="http://starbuzzcoffee.com/processorder.php" method="POST">
+       
+       <div class="tableRow"> 
+           <p>
+            选择咖啡：
+            </p>
+            <p>
+            <select name="beans">
+                  <option value="咖啡1">咖啡1</option>
+                  <option value="咖啡2">咖啡2</option>
+                  <option value="咖啡3">咖啡3</option>
+                  <option value="咖啡4">咖啡4</option>
+            </select>
+           </p>
+        </div> 
+        <div class="tableRow"> 
+           <p>   Type: </p>
+           <p>
+             <input type="radio" name="咖啡种类" value="全豆咖啡">全豆咖啡<br>
+             <input type="radio" name="咖啡种类" value="研磨咖啡">研磨咖啡<br>
+           </p>
+        </div>  
+        <div class="tableRow"> 
+           <p>
+             Mumber of bags:
+            </p>
+           <p> 
+             <input type="number" name="bags" min="1" max="10">
+           </p>
+        </div> 
+        <div class="tableRow label"> 
+           <p>   
+             Must arrive by date:</p>
+            
+           <p>
+             <input type="date" name="date">
+           </p>
+        </div>
+        <div class="tableRow label"> 
+           <p>Extras:</p>
+           <p>
+             <input type="checkbox" name="extras[]" value="giftwrap" id="Giftwrap">        <label for="Giftwrap">Giftwrap</label> <br>
+             <input type="checkbox" name="extras[]" value="catalog" id="catalog" checked>  <label for="catalog">Include catalog </label><br>
+           </p>
+        </div>
+        <div class="tableRow"> 
+           <p class="heading">Ship to:</p> 
+            <p></p>
+        </div>   
+        <div class="tableRow">     
+          
+          
+           <p> 名字：</p> 
+           <p><input type="text" name="名字"> </p>
+        </div>   
+        <div class="tableRow">  
+           <p> 地址：</p>  
+           <p><input type="text" name="地址"> </p>
+         </div>  
+         <div class="tableRow"> 
+           <p>城市：</p> 
+            <p><input type="text" name="城市"> </p>
+          </div>  
+        <div class="tableRow">     
+           <p> 邮编：</p>  <p><input type="text" name="邮编"> </p>
+        </div>
+        <div class="tableRow">    
+           <p>电话：</p>  <p><input type="tel" name="电话"> </p>
+         </div>  
+        
+        <div class="tableRow">   
+              <p>
+               意见与反馈：
+              </p>
+           <p>   
+               <textarea name="意见反馈"></textarea>
+           </p>
+        </div> 
+        <div class="tableRow">  
+           <p>
+                <input type="submit" value="订购">
+           </p>
+        </div>
+        
+       </div> 
+      </div>
+       
+     
+  </body>
+</html>
